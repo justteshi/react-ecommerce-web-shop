@@ -24,7 +24,7 @@ function AddressFrom({ checkoutToken, next }) {
     const fetchShippingCountries = async (checkoutTokeId) => {
         const { countries } = await commerce.services.localeListShippingCountries(checkoutTokeId)
         
-        console.log(countries)
+        
         setShippingCountries(countries)
         setShippingCountry(Object.keys(countries)[0])
     }
@@ -66,6 +66,7 @@ function AddressFrom({ checkoutToken, next }) {
                         <FormInput name='lastName' label='Last name' />
                         <FormInput name='phone' label='Phone' />
                         <FormInput name='email' label='Email' />
+                        <FormInput name='address1' label='Address line 1' />
                         <FormInput name='city' label='City' />
                         <FormInput name='zipCode' label='Zip Code' />
                         <Grid item xs={12} sm={6}>
